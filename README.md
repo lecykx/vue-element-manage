@@ -8,6 +8,8 @@ An admin management system template with Vue 2.0 and Element-UI 1.4.6
 [![element-ui](https://img.shields.io/badge/element--ui-1.4.6-blue.svg)](https://github.com/ElemeFE/element)
 </center>
 
+![screenshot](https://github.com/lecykx/vue-element-manage/blob/master/demo.gif)
+
 ## Build Setup
 
 ``` bash
@@ -35,4 +37,4 @@ npm test
 
 ## License
 
-[MIT](https://github.com/lecykx/vue-element-manage/LICENSE)
+[MIT](https://github.com/lecykx/vue-element-manage/blob/master/LICENSE)
