@@ -10,7 +10,7 @@ export function getUserRole(loginId) {
         header: {
             'Content-Type': 'application/json;charset=UTF-8',
         }
-    });
+    })
 
 }
 
@@ -25,7 +25,7 @@ export function updateLoginRole(datas) {
         header: {
             'Content-Type': 'application/json;charset=UTF-8',
         }
-    });
+    })
 
 }
 
@@ -40,7 +40,7 @@ export function selectByFilter(datas) {
         header: {
             'Content-Type': 'application/json;charset=UTF-8',
         }
-    });
+    })
 
 }
 
@@ -55,7 +55,7 @@ export function insertRole(FormData) {
         header: {
             'Content-Type': 'application/json;charset=UTF-8',
         }
-    });
+    })
 }
 
 export function updateRole(FormData) {
@@ -69,5 +69,5 @@ export function updateRole(FormData) {
         header: {
             'Content-Type': 'application/json;charset=UTF-8',
         }
-    });
+    })
 }

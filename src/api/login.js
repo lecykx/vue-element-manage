@@ -21,13 +21,6 @@ export function login(username, password) {
     })
 }
 
-export function logout() {
-    return fetch({
-        url: 'park-auth-service/logout',
-        method: 'post'
-    })
-}
-
 export function getUserInfo(token) {
     return fetch({
         url: 'park-auth-service/auth/user',

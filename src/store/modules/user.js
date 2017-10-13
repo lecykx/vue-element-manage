@@ -1,4 +1,4 @@
-import { login, logout, getUserInfo } from '@/api/login'
+import { login, getUserInfo } from '@/api/login'
 import { getToken, setToken, removeToken } from '@/utils/auth'
 import avatar from '@/assets/images/avatar.png'
 
@@ -41,11 +41,6 @@ const user = {
         },
         SET_ROLES: (state, roles) => {
             state.roles = roles
-        },
-        LOGIN_SUCCESS: () => {
-        },
-        LOGOUT_USER: state => {
-            state.user = ''
         }
     },
 
@@ -82,8 +77,8 @@ const user = {
                     resolve(response)
                 }).catch(error => {
                     reject(error)
-                });
-            });
+                })
+            })
         },
 
         // 登出
@@ -92,25 +87,6 @@ const user = {
                 commit('SET_TOKEN', '')
                 commit('SET_ROLES', [])
                 removeToken()
-                resolve()
-            })
-        },
-
-        // 前端 登出
-        FedLogOut({ commit }) {
-            return new Promise(resolve => {
-                commit('SET_TOKEN', '')
-                removeToken()
-                resolve()
-            });
-        },
-
-        // 动态修改权限
-        ChangeRole({ commit }, role) {
-            return new Promise(resolve => {
-                commit('SET_ROLES', [role])
-                commit('SET_TOKEN', role)
-                setToken(role)
                 resolve()
             })
         }
