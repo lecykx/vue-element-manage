@@ -4,12 +4,7 @@ export function getUserRole(loginId) {
 
     return fetch({
         url: 'park-user-service/v1/role/findByLoginId/' + loginId,
-        method: 'get'
-    },
-    {
-        header: {
-            'Content-Type': 'application/json;charset=UTF-8',
-        }
+        method: 'GET'
     })
 
 }
@@ -20,11 +15,6 @@ export function updateLoginRole(datas) {
         url: 'park-user-service/v1/role/updateLoginRole',
         method: 'PUT',
         data: datas
-    },
-    {
-        header: {
-            'Content-Type': 'application/json;charset=UTF-8',
-        }
     })
 
 }
@@ -35,11 +25,6 @@ export function selectByFilter(datas) {
         url: 'park-user-service/v1/role/selectByFilter',
         method: 'POST',
         data: datas
-    },
-    {
-        header: {
-            'Content-Type': 'application/json;charset=UTF-8',
-        }
     })
 
 }
@@ -48,13 +33,8 @@ export function insertRole(FormData) {
 
     return fetch({
         url: 'park-user-service/v1/role/insertRole',
-        method: 'post',
+        method: 'POST',
         data: FormData
-    },
-    {
-        header: {
-            'Content-Type': 'application/json;charset=UTF-8',
-        }
     })
 }
 
@@ -64,10 +44,5 @@ export function updateRole(FormData) {
         url: 'park-user-service/v1/role/updateRole',
         method: 'PUT',
         data: FormData
-    },
-    {
-        header: {
-            'Content-Type': 'application/json;charset=UTF-8',
-        }
     })
 }

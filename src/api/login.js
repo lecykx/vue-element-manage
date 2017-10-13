@@ -13,7 +13,7 @@ export function login(username, password) {
 
     return fetch({
         url: 'park-auth-service/auth/oauth/token',
-        method: 'post',
+        method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
@@ -21,15 +21,10 @@ export function login(username, password) {
     })
 }
 
-export function getUserInfo(token) {
+export function getUserInfo() {
     return fetch({
         url: 'park-auth-service/auth/user',
-        method: 'get'
-    },
-    {
-        header: {
-            'Content-Type': 'application/json;charset=UTF-8'
-        }
+        method: 'GET'
     })
 }
 
